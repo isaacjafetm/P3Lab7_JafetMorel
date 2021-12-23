@@ -137,8 +137,15 @@ void Tienda::totalUnidades(){
 void Tienda::ordenar(int cat,char talla){
 	if(cat!=100 && talla!= 'X'){
 		for(int j=0;j<listaArts.size();j++){	
-			if(listaCats[cat]==listaArts[j]->getCategoria() && talla==listaArts[j]->getTalla()){
-				cout<<listaArts[j]->toString();
+			if(listaCats[cat]==listaArts[j]->getCategoria() /*&& talla==listaArts[j]->getTalla()*/){
+				//cha
+				Articulo* a = listaArts[j];
+				for(int k=0; k<a->getTalla().size();k++){
+					if(talla==a->getTalla()[k]){
+						cout<<a->toString();
+					}
+				}
+				
 			}
 			cout<<endl;
 		}
@@ -152,10 +159,14 @@ void Tienda::ordenar(int cat,char talla){
 		}
 	}else if(cat==100){
 		for(int j=0;j<listaArts.size();j++){	
-			if(talla==listaArts[j]->getTalla()){
-				cout<<listaArts[j]->toString();
+			Articulo* a = listaArts[j];
+			for(int k=0;a->getTalla().size();k++){
+				if(talla==a->getTalla()[k]){
+				cout<<a->toString();
 			}
 			cout<<endl;
+			}
+			
 		}
 	}
 }

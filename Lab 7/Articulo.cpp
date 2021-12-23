@@ -18,7 +18,8 @@ string Articulo::toString(){
 string Articulo::tallaToString(){
 	string salida="";
 	for(int i =0; i<talla.size(); i++){
-		salida=talla[i]+" ";
+		char s=talla[i];
+		salida=s+" ";
 	}
 	return salida;
 }
@@ -69,6 +70,10 @@ int Articulo::getDescuento(){
 
 void Articulo::setDescuento(int discount){
 	descuento=discount;
+}
+
+vector<char> Articulo::getTalla(){
+	return this->talla;
 }
 
 Articulo::~Articulo()

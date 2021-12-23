@@ -3,6 +3,8 @@
 #include "Categoria.h"
 #include "Articulo.h"
 #include <iostream>
+#include <vector>
+using namespace std;
 class Tienda
 {
 	public:

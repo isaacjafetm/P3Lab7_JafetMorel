@@ -90,7 +90,7 @@ int main(int argc, char** argv) {
 			case 3:{
 				cout<<"Listado por categoria: "<<endl;
 				tiendita->listaPorCateg();
-				cout<"Total de unidades por categoria: "<<endl;
+				cout<<"Total de unidades por categoria: "<<endl;
 				tiendita->unidadPorCateg();
 				cout<<"Precio total por categoria: "<<endl;
 				tiendita->precioPorCateg();
